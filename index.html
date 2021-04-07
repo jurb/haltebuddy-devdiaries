@@ -8,7 +8,11 @@
     />
     <title>The making of Haltebuddy</title>
     <link href="big.css" rel="stylesheet" type="text/css" />
+    <script>
+      BIG_ASPECT_RATIO = 1.777777778;
+    </script>
     <script src="big.js"></script>
+    <base target="_blank" />
   </head>
   <body class="light">
     <div>Haltebuddy: <br />The&nbsp;making&nbsp;of</div>
@@ -103,15 +107,15 @@
     </div>
 
     <div>
-      Short term goal: make public transport more accessible to physically
-      disabled people
+      Sub goal: make public transport more accessible to physically disabled
+      people
     </div>
 
     <div>
       2 promising problem spaces:<br />
       <ol>
         <li>Visibility of people with disabilities (Halteknop)</li>
-        <li>Personalize accessibility information (Haltebuddy)</li>
+        <li>Personalized accessibility information (Haltebuddy)</li>
       </ol>
     </div>
 
@@ -139,49 +143,160 @@
 
     <div>Haltebuddy</div>
 
+    <div
+      class="layout"
+      style="grid-template-columns: 25% 75%; grid-template-rows: repeat(4, 25%)"
+    >
+      <div></div>
+      <div>Team</div>
+      <img src="images/team/heike.jpg" />
+      <div>Designer / project management</div>
+      <img src="images/team/jur3.jpg" />
+      <div>Product developer</div>
+      <img src="images/team/lino.jpg" />
+      <div>Data analysis and scoring</div>
+    </div>
+
     <div>
-      Haltebuddy<br />
+      Process<br />
       <ul>
-        <span>🤔 Accessibility is not binary</span
+        <span>🤔 Accessibility is personal</span
         ><br />
         <span>📚 Data on stop properties</span
         ><br />
-        <span>💡 Connect data & profile</span
+        <span>💡 Data + profile = personalized ℹ️</span
         ><br />
-        <span>👩🏽‍🦼 Personalized routing?</span>
+        <span>🚃 Work with GVB / Vervoerregio</span>
+        <br />
+        <span>📱 Building and testing the app</span>
       </ul>
     </div>
 
-    <div class="layout" style="grid-template-columns: 25% 75%">
-      <div>accessible stops</div>
-      <img src="images/haltecheck-notebook.png" />
+    <div
+      class="layout"
+      style="grid-template-columns: 25% 70%; grid-column-gap: 50px"
+    >
+      <div>Interviews: accessibility shouldn't be a single binary property</div>
+      <img
+        src="images/accessbility-not-binary.jpg"
+        style="border: 1px solid rgb(0, 0, 0, 0.1)"
+      />
     </div>
 
-    <div class="layout" style="grid-template-columns: 25% 75%">
-      <div>Data analysis / prototyping example: accessible stops</div>
-      <img src="images/haltecheck-screen.png" />
+    <div
+      class="layout"
+      style="grid-template-columns: 25% 70%; grid-column-gap: 50px"
+    >
+      <div>Turns out there is a lot of data on public transport stops.</div>
+      <img src="images/dova-halte.png" style="border: 1px solid black" />
     </div>
 
     <div>
-      Challenges<br />
-      <small>
-        1. Trying to iterate quickly while getting access to data and resources
-        can take forever → frustration on both sides
-      </small>
+      <a href="https://data.ndovloket.nl/haltes/">Updated daily</a> and
+      <a href="https://github.com/BISONNL/CHB/blob/master/xsd/chb-msg-v1.6.xsd"
+        >well documented</a
+      >, we just have to
+      <a href="https://github.com/jurb/NDOV-CHB-to-JSON">mangle it</a> into
+      something palpable.
     </div>
+
     <div>
-      Challenges<br />
-      <small>
-        2. A proven hypotheses and MVP is only good if someone will continue
-        with the idea and findings
-      </small>
+      <a
+        href="https://observablehq.com/@jurb/data-exploratie-profiel-en-halteinformatie-v3-backup-10-no"
+        >First observable prototype</a
+      >: connecting a profile to the data (binary but personal)
     </div>
+
+    <div>Research into combining data with a personal profile</div>
     <div>
-      Challenges<br />
-      <small>
-        3. We are waiting with bells on for a simple, privacy approved solution
-        for static hosting, auth, and a simple db
-      </small>
+      Interviews with
+      <a
+        href="https://www.figma.com/proto/gWwlGk4mVH3ZZ6A6a9ww3p/Haltebuddy-fase-2?node-id=611%3A1360"
+        >figma mockup</a
+      >
+      and our first
+      <a
+        href="https://observablehq.com/@jurb/data-exploratie-profiel-en-halteinformatie-v3-backup-10-no"
+      >
+        Observable notebook</a
+      >
     </div>
+
+    <div>
+      We asked questions like...
+      <ul>
+        <li>Are you able to fill in this profile?</li>
+        <li>Do these screens make sense?</li>
+        <li>Are you missing something?</li>
+        <li>Do the stops around your house meet your expectations?</li>
+      </ul>
+    </div>
+
+    <div>
+      Outcome
+      <ul>
+        <li>We can continue with testing an actual web application 🎉</li>
+        <li>Ux improvements (profile screen)</li>
+        <li>The need to score on multiple properties</li>
+        <li>Integrate services and relevant information</li>
+      </ul>
+    </div>
+
+    <div>
+      <a
+        href="https://observablehq.com/@jurb/prototype-profiel-en-halteinformatie"
+        >Second observable notebook</a
+      >
+      <ul>
+        <li>Scoring function on multiple properties</li>
+        <li>Fetch amsterdam panorama images (sadly offline)</li>
+        <li>Fetch real time routes</li>
+        <li>Scrape and show GVB elevator information</li>
+      </ul>
+    </div>
+
+    <div>The joy of pair programming and prototyping prototypes</div>
+
+    <div>Meanwhile: buy in from the GVB (public transport in Amsterdam)!</div>
+
+    <div>Proving viability of idea with no routing function (yet)</div>
+
+    <div>Building and testing the app</div>
+    <div>
+      Stack / way of working
+      <ul>
+        <li>Vue.js + Vuetify</li>
+        <li>Persistent store</li>
+        <li>'Implemented' Figma screens</li>
+        <li>Scoring function: copy paste!</li>
+      </ul>
+    </div>
+
+    <div>
+      The resulting web application in an iframe on
+      <a href="https://haltebuddy.focustest.nl/landingpage"
+        >our landing page :)</a
+      >
+    </div>
+
+    <div>UX test in controlled setting</div>
+
+    <div>
+      <a
+        href="https://docs.google.com/presentation/d/18z1kKqbTW5bTGFxQfOwhL4FDkDlxv4yhTpL-jijnobo"
+        >Evaluation</a
+      >
+    </div>
+
+    <div>
+      Easy as possible implementation for GVB:
+      <a
+        href="https://next.observablehq.com/@jurb/haltebuddy-aanbevelingen-techniek"
+      >
+        yet another notebook</a
+      >
+    </div>
+
+    <div>🏁 Questions?</div>
   </body>
 </html>
